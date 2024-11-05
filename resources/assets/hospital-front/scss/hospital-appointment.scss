@@ -1,0 +1,211 @@
+
+@import "../scss/hospital-variables.scss";
+
+.appointment-page {
+    .appointment-section {
+        .appointment-form {
+            background-color: $white;
+            padding: 40px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+
+            &__input-block {
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 767px) {
+                padding: 20px;
+            }
+
+            .grp-radio {
+                height: 50px;
+            }
+        }
+
+        &::after {
+            @media (min-width: 1200px) {
+                background-color: #f5f8f9;
+                content: "";
+                display: block;
+                max-width: 1420px;
+                position: absolute;
+                height: auto;
+                border-radius: 20px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                bottom: -40px;
+                z-index: -1;
+                min-height: 400px;
+            }
+
+            @media (max-width: 1399px) and (min-width: 1200px) {
+                max-width: 1200px;
+            }
+        }
+    }
+
+    .contact-details-section {
+        .contact-details-block {
+            padding-top: 40px;
+            padding-bottom: 20px;
+
+            .icon-details-box {
+                width: 80px;
+                height: 80px;
+                border-radius: 50px;
+                margin-top: -40px;
+                position: relative;
+                z-index: 1;
+            }
+
+            &:nth-child(1) {
+                .icon-details-box {
+                    background-color: #EBF9F2;;
+                    color: $green;
+                }
+            }
+
+            &:nth-child(2) {
+                .icon-details-box {
+                    background-color: #FFF4ED;
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+.form-check {
+    display: block;
+    margin-bottom: 0.125rem;
+    min-height: 1.5rem;
+    // padding-left: 2.063em;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -2.063em;
+}
+.form-check-input {
+    color-adjust: exact;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ced4da;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    height: 1.563em;
+    margin-top: -0.0315em;
+    -webkit-print-color-adjust: exact;
+    vertical-align: top;
+    width: 1.563em;
+}
+.form-check-input[type="checkbox"] {
+    border-radius: 0.25em;
+}
+.form-check-input[type="radio"] {
+    border-radius: 50%;
+}
+.form-check-input:active {
+    filter: brightness(90%);
+}
+.form-check-input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0;
+}
+.form-check-input:checked {
+    background-color: $orange;
+    border-color: $orange;
+}
+.form-check-input:checked[type="checkbox"] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E");
+}
+.form-check-input:checked[type="radio"] {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2' fill='%23FFF'/%3E%3C/svg%3E");
+}
+.form-check-input[type="checkbox"]:indeterminate {
+    background-color: $orange;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23FFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3E%3C/svg%3E");
+    border-color: $orange;
+}
+.form-check-input:disabled {
+    filter: none;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.form-check-input:disabled ~ .form-check-label,
+.form-check-input[disabled] ~ .form-check-label {
+    opacity: 0.5;
+}
+
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='rgba(6, 9, 23, 0.25)'/%3E%3C/svg%3E");
+    background-position: 0;
+    border-radius: 2.625em;
+    margin-left: -3.125em;
+    transition: background-position 0.15s ease-in-out;
+    width: 2.625em;
+}
+@media (prefers-reduced-motion: reduce) {
+    .form-switch .form-check-input {
+        transition: none;
+    }
+}
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='none'/%3E%3C/svg%3E");
+}
+.form-switch .form-check-input:checked {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23FFF'/%3E%3C/svg%3E");
+    background-position: 100%;
+}
+.form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.form-switch .form-check-input {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E") !important;
+}
+.form-switch .form-check-input:checked {
+    background-color: $orange !important;
+}
+.form-check-label {
+    font-size: 0.875rem;
+}
+.custom-calendar {
+
+    box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1) !important;
+    border-radius: 25px !important;
+    background-color:#ffffff !important;
+    .flatpickr-day  {
+        color:#507392 !important;
+        border: 1px solid #eeeeee !important;
+        background: #eeeeee !important;
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 30px !important;
+        margin: 1px !important;
+    }
+    .dayContainer {
+        font-size:16px !important;
+    }
+    .dayContainer,.flatpickr-weekdays{
+        padding:4px 8px !important;
+
+    }
+    span.flatpickr-weekday {
+        color:#07003b !important;
+        font-weight:normal !important;
+        font-size:14px !important;
+    }
+    .flatpickr-current-month .flatpickr-monthDropdown-months,.flatpickr-current-month input.cur-year {
+        font-weight: bold !important;
+        color:#07003b !important;
+    }
+
+    .selected {
+        background: #161e54 !important;
+        color:white !important;
+    }
+}

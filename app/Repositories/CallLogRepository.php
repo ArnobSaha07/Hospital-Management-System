@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Models\CallLog;
+
+/**
+ * Class CallLogRepository
+ *
+ * @version July 3, 2020, 9:12 am UTC
+ */
+class CallLogRepository extends BaseRepository
+{
+    /**
+     * @var array
+     */
+    protected $fieldSearchable = [
+        'name',
+    ];
+
+    /**
+     * Return searchable fields
+     */
+    public function getFieldsSearchable(): array
+    {
+        return $this->fieldSearchable;
+    }
+
+    /**
+     * Configure the Model
+     **/
+    public function model()
+    {
+        return CallLog::class;
+    }
+}
